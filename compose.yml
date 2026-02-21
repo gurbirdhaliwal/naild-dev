@@ -1,4 +1,6 @@
 services:
+
+
   web:
     build:
       context: ${NAILD_WEBAPP_PATH:-../Naild-WebApp/naild-website}
@@ -36,3 +38,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL:-jdbc:mysql://host.docker.internal:3306/User}
+      SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME:-root}
+      SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD:-REMOVED-ROTATED-DB-PASSWORD}
+
