@@ -16,6 +16,7 @@ services:
     volumes:
       - ${NAILD_WEBAPP_PATH:-../Naild-WebApp/naild-website}:/app
       - /app/node_modules
+      - /app/.next
     depends_on:
       - python_backend
       - springboot
@@ -42,4 +43,3 @@ services:
       SPRING_DATASOURCE_URL: ${SPRING_DATASOURCE_URL:-jdbc:mysql://host.docker.internal:3306/User}
       SPRING_DATASOURCE_USERNAME: ${SPRING_DATASOURCE_USERNAME:-root}
       SPRING_DATASOURCE_PASSWORD: ${SPRING_DATASOURCE_PASSWORD:-REMOVED-ROTATED-DB-PASSWORD}
-
