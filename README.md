@@ -1,4 +1,4 @@
-# Memova Dev Workspace
+# Knappi Dev Workspace
 
 Single entry point to run all services (frontend, python backend, Spring Boot).
 
@@ -6,7 +6,7 @@ Single entry point to run all services (frontend, python backend, Spring Boot).
 
 Clone the three repos as siblings under the same parent directory:
 
-- memova-dev (this repo)
+- knappi-dev (this repo)
 - Naild-WebApp
 - security
 
