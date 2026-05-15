@@ -3,7 +3,7 @@ services:
 
   web:
     build:
-      context: ${NAILD_WEBAPP_PATH:-../Naild-WebApp/naild-website}
+      context: ${KNAPPI_WEBAPP_PATH:-../Naild-WebApp/naild-website}
       dockerfile: Dockerfile.web.dev
     ports:
       - "3000:3000"
@@ -14,7 +14,7 @@ services:
       CHOKIDAR_USEPOLLING: "true"
       WATCHPACK_POLLING: "true"
     volumes:
-      - ${NAILD_WEBAPP_PATH:-../Naild-WebApp/naild-website}:/app
+      - ${KNAPPI_WEBAPP_PATH:-../Naild-WebApp/naild-website}:/app
       - /app/node_modules
       - /app/.next
     depends_on:
@@ -23,7 +23,7 @@ services:
 
   python_backend:
     build:
-      context: ${NAILD_WEBAPP_PATH:-../Naild-WebApp/naild-website}
+      context: ${KNAPPI_WEBAPP_PATH:-../Naild-WebApp/naild-website}
       dockerfile: python_backend/Dockerfile
     ports:
       - "8081:8081"
@@ -31,7 +31,7 @@ services:
       OLLAMA_HOST: ${OLLAMA_HOST:-http://host.docker.internal:11434}
       SPRING_API_BASE: ${SPRING_API_BASE:-http://springboot:8080/api/v1}
     volumes:
-      - ${NAILD_WEBAPP_PATH:-../Naild-WebApp/naild-website}/python_backend:/app
+      - ${KNAPPI_WEBAPP_PATH:-../Naild-WebApp/naild-website}/python_backend:/app
 
   springboot:
     build:

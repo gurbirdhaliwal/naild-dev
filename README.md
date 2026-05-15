@@ -31,7 +31,7 @@ docker compose up --build
 Create a `.env` file in this repo to override paths or ports. Example:
 
 ```bash
-NAILD_WEBAPP_PATH=../Naild-WebApp/naild-website
+KNAPPI_WEBAPP_PATH=../Naild-WebApp/naild-website
 SPRINGBOOT_PATH=../security
 ```
 
